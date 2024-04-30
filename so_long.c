@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjaada <rjaada@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 22:50:08 by rjaada            #+#    #+#             */
-/*   Updated: 2024/04/29 22:50:10 by rjaada           ###   ########.fr       */
+/*   Created: 2024/04/30 16:51:22 by rjaada            #+#    #+#             */
+/*   Updated: 2024/04/30 16:51:24 by rjaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	ft_exit(t_data *data)
 /* will show a message in the terminal and exit the process */
 {
 	mlx_destroy_window(data->mlx, data->win);
-	printf("You gave up :(\n");
-	printf("Is the map to hard for you?\n");
+	ft_printf("You gave up :(\n");
+	ft_printf("Is the map to hard for you?\n");
 	exit(EXIT_SUCCESS);
 }
 

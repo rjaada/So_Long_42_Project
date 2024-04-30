@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_c.c                                       :+:      :+:    :+:   */
+/*   ft_handle_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjaada <rjaada@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 16:54:48 by rjaada            #+#    #+#             */
-/*   Updated: 2024/04/30 16:54:50 by rjaada           ###   ########.fr       */
+/*   Created: 2023/11/13 17:05:15 by rjaada            #+#    #+#             */
+/*   Updated: 2023/11/13 17:05:18 by rjaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_count_c(char *s, char c)
-/* will count appearances of c inside s and return them as integer */
+int	ft_handle_hexlower(va_list ap)
 {
-	int	i;
-	int	x;
+	unsigned int	n;
 
-	i = 0;
-	x = 0;
-	if (!s)
-		return (-1);
-	while (s && s[i])
-	{
-		if (s[i++] == c)
-			x++;
-	}
-	return (x);
+	n = va_arg(ap, unsigned int);
+	return (ft_putnbr_base(n, "0123456789abcdef"));
+}
+
+int	ft_handle_hexupper(va_list ap)
+{
+	unsigned int	n;
+
+	n = va_arg(ap, unsigned int);
+	return (ft_putnbr_base(n, "0123456789ABCDEF"));
 }

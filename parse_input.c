@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjaada <rjaada@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 22:49:12 by rjaada            #+#    #+#             */
-/*   Updated: 2024/04/29 22:53:08 by rjaada           ###   ########.fr       */
+/*   Created: 2024/04/30 16:51:40 by rjaada            #+#    #+#             */
+/*   Updated: 2024/04/30 16:51:42 by rjaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	ft_map_error(char *error_msg)
 /* will print the error message end exit the process */
 {
-	printf("%s", error_msg);
+	ft_printf("%s", error_msg);
 	exit(EXIT_FAILURE);
 }
 

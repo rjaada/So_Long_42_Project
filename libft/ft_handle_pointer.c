@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_c.c                                       :+:      :+:    :+:   */
+/*   ft_handle_pointer.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjaada <rjaada@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 16:54:48 by rjaada            #+#    #+#             */
-/*   Updated: 2024/04/30 16:54:50 by rjaada           ###   ########.fr       */
+/*   Created: 2023/11/13 17:05:50 by rjaada            #+#    #+#             */
+/*   Updated: 2023/11/13 17:05:52 by rjaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_count_c(char *s, char c)
-/* will count appearances of c inside s and return them as integer */
+int	ft_handle_pointer(va_list ap)
 {
-	int	i;
-	int	x;
+	void	*n;
 
-	i = 0;
-	x = 0;
-	if (!s)
-		return (-1);
-	while (s && s[i])
-	{
-		if (s[i++] == c)
-			x++;
-	}
-	return (x);
+	n = va_arg(ap, void *);
+	write(1, "0x", 2);
+	return (ft_putnbr_base((unsigned long long)n, "0123456789abcdef") + 2);
 }

@@ -5,17 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjaada <rjaada@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 22:51:30 by rjaada            #+#    #+#             */
-/*   Updated: 2024/04/29 22:51:32 by rjaada           ###   ########.fr       */
+/*   Created: 2024/04/30 16:53:24 by rjaada            #+#    #+#             */
+/*   Updated: 2024/04/30 16:53:26 by rjaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include "ft_printf.h"
+
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
+# include <stdarg.h>
+# include <stdio.h>
 
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t nelem, size_t elsize);

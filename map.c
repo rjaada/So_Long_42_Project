@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjaada <rjaada@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 22:48:59 by rjaada            #+#    #+#             */
-/*   Updated: 2024/04/29 22:49:01 by rjaada           ###   ########.fr       */
+/*   Created: 2024/04/30 16:51:59 by rjaada            #+#    #+#             */
+/*   Updated: 2024/04/30 16:52:01 by rjaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_window_size(t_data *data, char **argv)
 	}
 	if (ft_strnstr(argv[1], ".ber", ft_strlen(argv[1])) == NULL)
 	{
-		printf("Error\nmap has to be .ber\n");
+		ft_printf("Error\nmap has to be .ber\n");
 		exit(EXIT_FAILURE);
 	}
 	data->size_x = (ft_line_length(fd) * IMG_W);

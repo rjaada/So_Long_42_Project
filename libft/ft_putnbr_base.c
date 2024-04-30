@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_c.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjaada <rjaada@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 16:54:48 by rjaada            #+#    #+#             */
-/*   Updated: 2024/04/30 16:54:50 by rjaada           ###   ########.fr       */
+/*   Created: 2024/04/30 16:54:04 by rjaada            #+#    #+#             */
+/*   Updated: 2024/04/30 16:54:06 by rjaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_count_c(char *s, char c)
-/* will count appearances of c inside s and return them as integer */
+int	ft_putnbr_base(unsigned long long nb, const char *base)
 {
-	int	i;
-	int	x;
+	unsigned long long	len;
+	int					count;
 
-	i = 0;
-	x = 0;
-	if (!s)
-		return (-1);
-	while (s && s[i])
-	{
-		if (s[i++] == c)
-			x++;
-	}
-	return (x);
+	count = 0;
+	len = ft_strlen(base);
+	if (nb >= len)
+		count += ft_putnbr_base(nb / len, base);
+	count += ft_putchar(base[nb % len]);
+	return (count);
 }

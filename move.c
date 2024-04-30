@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjaada <rjaada@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 22:49:06 by rjaada            #+#    #+#             */
-/*   Updated: 2024/04/29 22:49:08 by rjaada           ###   ########.fr       */
+/*   Created: 2024/04/30 16:51:48 by rjaada            #+#    #+#             */
+/*   Updated: 2024/04/30 16:51:50 by rjaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
 static void	ft_player_move(t_data *data, char position, int direction)
-/* will put the correct orientation of the spaceship on the screen */
+/* will put the correct orientation of the player on the screen */
 {
 	if (position == 'y' && direction == UP)
 	{
@@ -63,13 +63,13 @@ void	ft_move(t_data *data, char pos, int dir)
 		data->p_x = data->p_x + 1 * dir;
 	else if (pos == 'y' && data->map->map[data->p_y + 1 * dir][data->p_x] == 'E'
 		&& data->collected != data->map->diamonds)
-		printf("Collect all diamonds before leaving\n");
+		ft_printf("Collect all diamonds before leaving\n");
 	else if (pos == 'x' && data->map->map[data->p_y][data->p_x + 1 * dir] == 'E'
 		&& data->collected != data->map->diamonds)
-		printf("Collect all diamonds before leaving\n");
+		ft_printf("Collect all diamonds before leaving\n");
 	ft_player_move(data, pos, dir);
 	if (data->map->map[data->p_y][data->p_x] == 'C')
 		ft_collect(data, pos, dir);
 	mlx_do_sync(data->mlx);
-	printf("You moved %d times.\n", ++data->counter);
+	ft_printf("You moved %d times.\n", ++data->counter);
 }

@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: rjaada <rjaada@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/29 22:51:35 by rjaada            #+#    #+#              #
-#    Updated: 2024/04/29 22:51:37 by rjaada           ###   ########.fr        #
+#    Created: 2024/04/30 16:53:18 by rjaada            #+#    #+#              #
+#    Updated: 2024/04/30 16:53:20 by rjaada           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,17 @@ CFILES = \
 		ft_strlen.c\
 		ft_strnstr.c\
 		get_next_line_utils.c\
-		get_next_line.c
+		get_next_line.c\
+		ft_handle_char.c\
+		ft_handle_hex.c\
+		ft_handle_int.c\
+		ft_handle_percent.c\
+		ft_handle_pointer.c\
+		ft_handle_string.c\
+		ft_handle_unsigned.c\
+		ft_printf.c\
+		ft_putchar.c\
+		ft_putnbr_base.c
 
 OBJECTS = $(CFILES:.c=.o)
 
